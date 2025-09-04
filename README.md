@@ -1,3 +1,3 @@
 # mytwitter
-資本家階級が使うツイッター<br>
+資本家階級のツイッター<br>
 ブラウザではTampermonkeyなど。AndroidではKiwiBrowser上のTampermonkeyなどで使えます。
