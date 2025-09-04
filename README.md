@@ -1,3 +1,3 @@
 # mytwitter
 資本家階級が使うツイッター<br>
-ブラウザではTampermonkeyなど。AndroidではAdBlockのユーザースクリプトやKiwiBrowserなどで使えます
+ブラウザではTampermonkeyなど。AndroidではKiwiBrowser上のTampermonkeyなどで使えます。
