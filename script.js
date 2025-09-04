@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         My Twitter
 // @version      1.0
-// @description  資本家階級が使うTwitter
+// @description  自分用Twitter
 // @match        https://x.com/*
 // @run-at       document-start
 // ==/UserScript==
@@ -23,6 +23,16 @@
         "div:has(> [href$='/lists'])",//リスト
         "div:has(> [href='/jobs'])"//仕事
     ];
+
+    const css = `
+    [data-testid='tweetText'],[data-testid='tweetTextarea_0RichTextInputContainer'],[data-testid="UserDescription"]  {
+        line-height:1.75em;
+    }
+    `;
+    let style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = css;
+    document.head.appendChild(style);
 
     const userId = "humitami";
 
