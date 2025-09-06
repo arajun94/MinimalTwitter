@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         My Twitter
+// @name         Minimal Twitter
 // @version      1.0
-// @description  自分用Twitter
+// @description  Twitterをシンプルにします
 // @match        https://x.com/*
 // @run-at       document-start
 // ==/UserScript==
@@ -11,10 +11,11 @@
 
     /*設定*/
 
-    const redirectStartPaths = ["/home"];
+    const redirectStartPaths = ["/home","/explore"];
     const redirectIncludePaths = ["/communities/","/lists"];
     const blockElemSelectors = [//まるでセレクタの見本市
-        //"[data-testid='AppTabBar_Explore_Link']",//検索とかのやつ
+        "[aria-label='トレンド'] > * > :not(:has([data-testid='SearchBox_Search_Input_label'])) > *",//サイドバー検索以外
+        "[data-testid='AppTabBar_Explore_Link']",//話題を検索
         "[data-testid='AppTabBar_Home_Link']",//ホーム
         "[aria-label='コミュニティ']",
         "[data-testid='premium-signup-tab']",//プレミアム
@@ -85,21 +86,9 @@
             }
         }
 
-        const blockSideBarExceptSearch = ()=>{
-            if(document.querySelectorAll("[aria-label='トレンド'] > * > *")){
-                let elems = document.querySelectorAll("[aria-label='トレンド'] > * > :not(:has([data-testid='SearchBox_Search_Input_label'])) > *");
-                if(elems.length>0){
-                    for(const elem of Array.from(elems)){
-                        elem.remove();
-                    }
-                }
-            }
-        }
-
         const observer = new MutationObserver(()=>{
             redirect();
             blockElem();
-            blockSideBarExceptSearch();
             if(doBlockUserRecommend)blockUserRecommend();
         });
         observer.observe(document.body, {
