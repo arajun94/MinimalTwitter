@@ -1,0 +1,16 @@
+x.com##[aria-label='トレンド'] > * > :not(:has([data-testid='SearchBox_Search_Input_label'])) > *
+x.com##[data-testid='AppTabBar_Explore_Link']
+x.com##[data-testid='AppTabBar_Home_Link']
+x.com##[aria-label='コミュニティ']
+x.com##[data-testid='premium-signup-tab']
+x.com##div:has(> [href='https://ads.x.com/?ref=gl-tw-tw-twitter-ads-rweb'])
+x.com##div:has(> [href='/i/monetization'])
+x.com##div:has(> [href='/i/verified-orgs-signup'])
+x.com##div:has(> [href$='/lists'])
+x.com##div:has(> [href='/jobs'])
+x.com##[data-testid="cellInnerDiv"]:has(h2) + :has([data-testid="UserCell"]) + :has([data-testid="UserCell"]) + :has([data-testid="UserCell"]) + :has([href^="/i/connect_people?user_id="]) + :not(:has([data-testid="tweet"])) > *
+x.com##[data-testid="cellInnerDiv"]:has(h2) + :has([data-testid="UserCell"]) + :has([data-testid="UserCell"]) + :has([data-testid="UserCell"]) + :has([href^="/i/connect_people?user_id="]) > *
+x.com##[data-testid="cellInnerDiv"]:has(h2) + :has([data-testid="UserCell"]) + :has([data-testid="UserCell"]) + :has([data-testid="UserCell"]) > *
+x.com##[data-testid="cellInnerDiv"]:has(h2) + :has([data-testid="UserCell"]) + :has([data-testid="UserCell"]) > *
+x.com##[data-testid="cellInnerDiv"]:has(h2) + :has([data-testid="UserCell"]) > *
+x.com##[data-testid="cellInnerDiv"]:has(h2) > *
